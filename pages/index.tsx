@@ -136,9 +136,7 @@ export default function Home() {
             </>
          
           <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
-            Chat With MBJ
-
-         
+          Démonstration d'un chatbot MBJ        
           </h1>
 
 
