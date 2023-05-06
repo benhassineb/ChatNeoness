@@ -18,6 +18,23 @@ If the question is not related to the context, politely respond that you are tun
 Question: {question}
 Helpful answer in markdown:`;
 
+
+const CONDENSE_PROMPT_FR = `Étant donné la conversation suivante et une question de suivi, reformulez la question de suivi pour qu'elle soit une question autonome.
+
+Historique de la conversation :
+{chat_history}
+Question de suivi : {question}
+Question autonome :`;
+
+const QA_PROMPT_FR = `Vous êtes un assistant AI serviable. Utilisez les éléments de contexte suivants pour répondre à la question à la fin.
+Si vous ne connaissez pas la réponse, dites simplement que vous ne savez pas. NE PAS essayer de fabriquer une réponse.
+Si la question n'est pas liée au contexte, répondez poliment que vous êtes configuré pour répondre uniquement aux questions liées au contexte.
+
+{context}
+
+Question : {question}
+Réponse utile en markdown :`;
+
 export const makeChain = (vectorstore: PineconeStore) => {
   const model = new OpenAI({
     temperature: 0, // increase temepreature to get more creative answers
@@ -28,9 +45,9 @@ export const makeChain = (vectorstore: PineconeStore) => {
     model,
     vectorstore.asRetriever(),
     {
-      qaTemplate: QA_PROMPT,
-      questionGeneratorTemplate: CONDENSE_PROMPT,
-      returnSourceDocuments: true, //The number of source documents returned is 4 by default
+      qaTemplate: QA_PROMPT_FR,
+      questionGeneratorTemplate: CONDENSE_PROMPT_FR,
+      returnSourceDocuments: false, //The number of source documents returned is 4 by default
     },
   );
   return chain;
