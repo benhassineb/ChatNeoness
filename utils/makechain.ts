@@ -31,7 +31,7 @@ const QA_PROMPT_FR = `Vous êtes un assistant virtuel utile. Utilisez les inform
 Si vous ne connaissez pas la réponse, dites simplement que vous ne savez pas. NE PAS essayer de inventer une réponse.
 Si la question n'a aucun rapport avec le contexte, répondez poliment que vous êtes configuré pour répondre uniquement aux questions liées au contexte.
 
-{contexte}
+{context}
 
 Question :
 {question}
