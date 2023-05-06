@@ -19,26 +19,28 @@ Question: {question}
 Helpful answer in markdown:`;
 
 
-const CONDENSE_PROMPT_FR = `En vous basant sur la conversation suivante et la question de suivi, reformulez la question de suivi pour qu'elle puisse être posée indépendamment.
+const CONDENSE_PROMPT_FR = `En utilisant la conversation suivante et une question de suivi, reformulez la question de suivi pour qu'elle puisse être posée seule.
 
-Historique de la conversation :
+Historique de la conversation:
 {chat_history}
-Question de suivi : {question}
-Question indépendante :`;
+Question de suivi:
+{question}
+Question autonome :`;
 
-const QA_PROMPT_FR = `Vous êtes un assistant AI utile. Utilisez les informations suivantes pour répondre à la question à la fin.
-Si vous ne connaissez pas la réponse, veuillez simplement indiquer que vous ne savez pas. NE tentez PAS de donner une réponse inventée.
-Si la question n'est pas liée aux informations suivantes, veuillez indiquer poliment que vous êtes programmé pour répondre uniquement aux questions liées aux informations fournies.
+const QA_PROMPT_FR = `Vous êtes un assistant virtuel utile. Utilisez les informations de contexte suivantes pour répondre à la question à la fin.
+Si vous ne connaissez pas la réponse, dites simplement que vous ne savez pas. NE PAS essayer de inventer une réponse.
+Si la question n'a aucun rapport avec le contexte, répondez poliment que vous êtes configuré pour répondre uniquement aux questions liées au contexte.
 
-{context}
+{contexte}
 
-Question : {question}
+Question :
+{question}
 Réponse utile en markdown :`;
 
 
 export const makeChain = (vectorstore: PineconeStore) => {
   const model = new OpenAI({
-    temperature: 1, // increase temepreature to get more creative answers
+    temperature: 0, // increase temepreature to get more creative answers
     modelName: 'gpt-3.5-turbo', //change this to gpt-4 if you have access
   });
 
