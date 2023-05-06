@@ -124,9 +124,22 @@ export default function Home() {
     <>
       <Layout>
         <div className="mx-auto flex flex-col gap-4">
+        <>
+              <p> Cette IA a utilisé uniquement les informations présentées dans ces deux pages web pour acquérir autant de connaissances que possible sur L'aide MOBILI-JEUNE :</p>
+
+              <ul>
+                <li><a href="https://mobilijeune.actionlogement.fr/faq">https://mobilijeune.actionlogement.fr/faq</a></li>
+                <li><a href="https://groupe-reussite.fr/ressources/financement-etudes-logement-aide-mobili-jeune/">https://groupe-reussite.fr/ressources/financement-etudes-logement-aide-mobili-jeune/</a></li>
+              </ul>
+            </>
+         
           <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
             Chat With MBJ
+
+         
           </h1>
+
+
           <main className={styles.main}>
             <div className={styles.cloud}>
               <div ref={messageListRef} className={styles.messagelist}>
@@ -263,6 +276,10 @@ export default function Home() {
         <footer className="m-auto p-4">
           <a href="https://twitter.com/mayowaoshin">
             {/* Powered by LangChainAI. Demo built by Mayo (Twitter: @mayowaoshin). */}
+
+
+
+
           </a>
         </footer>
       </Layout>
