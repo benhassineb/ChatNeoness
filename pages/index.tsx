@@ -131,6 +131,8 @@ export default function Home() {
                 <li><a href="https://mobilijeune.actionlogement.fr/faq">https://mobilijeune.actionlogement.fr/faq</a></li>
                 <li><a href="https://groupe-reussite.fr/ressources/financement-etudes-logement-aide-mobili-jeune/">https://groupe-reussite.fr/ressources/financement-etudes-logement-aide-mobili-jeune/</a></li>
               </ul>
+              <p>Elle utilise des API gratuites, ce qui peut rendre les réponses plus lentes et moins précises. Toutefois, en optant pour la version payante des API, les réponses seraient plus rapides et plus pertinentes.</p>
+
             </>
          
           <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
