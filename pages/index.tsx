@@ -25,7 +25,7 @@ export default function Home() {
   }>({
     messages: [
       {
-        message: 'Bonjour ! Je suis Manon, votre assistante virtuelle. Je suis ici pour vous aider. Que souhaitez-vous savoir sur L\'AIDE MOBILI-JEUNE® ?',
+        message: 'Bonjour ! Je suis ici pour vous aider. Que souhaitez-vous savoir sur NEONESS ?',
         type: 'apiMessage',
       },
     ],
@@ -124,19 +124,10 @@ export default function Home() {
     <>
       <Layout>
         <div className="mx-auto flex flex-col gap-4">
-        <>
-              <p> Cette IA a utilisé uniquement les informations présentées dans ces deux pages web pour acquérir autant de connaissances que possible sur L'aide MOBILI-JEUNE :</p>
-
-              <ul>
-                <li><a href="https://mobilijeune.actionlogement.fr/faq">https://mobilijeune.actionlogement.fr/faq</a></li>
-                <li><a href="https://groupe-reussite.fr/ressources/financement-etudes-logement-aide-mobili-jeune/">https://groupe-reussite.fr/ressources/financement-etudes-logement-aide-mobili-jeune/</a></li>
-              </ul>
-              <p>En enrichissant les données fournies et en les rendant plus précises et plus pertinentes, on peut améliorer significativement la qualité des réponses.</p>
-
-            </>
+       
          
           <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
-           Chat with MBJ        
+           Chat with NEONESS       
           </h1>
 
 
@@ -237,7 +228,7 @@ export default function Home() {
                     placeholder={
                       loading
                         ? 'En attente d\'une réponse...'
-                        : 'qu\'est-ce que l\'aide mobili-jeune ?'
+                        : 'Quel âge pour aller à Neoness ?'
                     }
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
